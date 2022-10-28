@@ -29,7 +29,7 @@ function App() {
     <div className='App'>
       <header className='App-header'>
         <h1 className='App-title'>Feedback!</h1>
-        <h4>Don't forget it!</h4>
+        <h4>Please rate from 1-6</h4>
       </header>
       {/* The comment page , the fourth form the user fills */}
       <Route path='/comment' exact>
