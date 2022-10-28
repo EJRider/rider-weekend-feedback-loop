@@ -7,7 +7,7 @@ import {Provider} from 'react-redux';
 import { createStore, combineReducers, applyMiddleware} from 'redux';
 import logger from 'redux-logger';
 
-
+// Takes in 
 const feeling = (state=0, action)=>{
     switch(action.type){
         case 'STORE_FEELING':

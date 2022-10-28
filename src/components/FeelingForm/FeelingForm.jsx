@@ -16,8 +16,9 @@ function FeelingForm(){
         evt.preventDefault
         dispatch({
             type:'STORE_FEELING',
-            payload: 
-        })
+            payload: feelNum
+        });
+        history.push('/support')
     }
 
     return (
@@ -25,7 +26,7 @@ function FeelingForm(){
         <form onSubmit={saveFeel}>
             <input 
             type='number'
-            onChange={(evt)=>{}}
+            onChange={(evt)=>{setFeelNum(evt.target.value)}}
             value={feelNum}
             ></input>
 
