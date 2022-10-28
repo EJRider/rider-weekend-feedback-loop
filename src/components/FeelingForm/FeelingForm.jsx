@@ -23,6 +23,7 @@ function FeelingForm(){
 
     return (
         <>
+        How do you feel?
         <form onSubmit={saveFeel}>
             <input 
             type='number'

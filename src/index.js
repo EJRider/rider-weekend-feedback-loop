@@ -16,6 +16,13 @@ const feeling = (state=0, action)=>{
     return state;
 }
 
+const support = (state=0, action)=>{
+    switch(action.type){
+        case 'STORE_SUPPORT':
+            return action.payload
+    }
+    return state;
+}
 
 
 const storeInstace = createStore(
