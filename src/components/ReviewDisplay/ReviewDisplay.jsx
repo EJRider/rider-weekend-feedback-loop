@@ -8,13 +8,14 @@ function ReviewDisplay({submitReview}){
 
     const feedback = useSelector(store=>store.feedback)
 
+    //Runs the axios.post, then alerts the user that the feedback is submitted before moving them to the Feeling('Home') page
     const saveFeedback = () => {
-        console.log('saving feedback');
         submitReview(feedback);
         alert('Thank you for providing feedback, have a lovely day :)');
         history.push('/')
     }
 
+    //Alerts the user that they are going back to the start of the survey, then moves the user back to the Feeling('Home') page
     const backToTheStart = () => {
         alert('Sending you back to the start');
         history.push('/')

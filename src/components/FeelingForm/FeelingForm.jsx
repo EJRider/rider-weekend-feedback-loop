@@ -12,8 +12,10 @@ function FeelingForm(){
 
     const [feelNum, setFeelNum] = useState(0);
 
+    //Sends data to the state and moves the user to the support page
     const saveFeel = (evt) => {
         evt.preventDefault
+        // Sends Feeling data to feeling state
         dispatch({
             type:'STORE_FEELING',
             payload: feelNum
@@ -23,7 +25,7 @@ function FeelingForm(){
 
     return (
         <>
-        <h2>How do you feel?</h2>
+        <h2>How are you feeling today?</h2>
         <form onSubmit={saveFeel}>
             <input 
             type='number'

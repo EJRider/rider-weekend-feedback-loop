@@ -3,9 +3,10 @@ const router =  express.Router();
 
 const pool = require('../modules/pool');
 
+
+//Takes in data from the axios and sends it to the database
 router.post('/', (req,res)=>{
     let newFeedback = req.body;
-    console.log('newFeedback is', newFeedback);
     const sqlText = `
     INSERT INTO "feedback"
         ("feeling", "understanding", "support", "comments")

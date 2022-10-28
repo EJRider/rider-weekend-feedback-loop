@@ -15,7 +15,7 @@ function CommentForm(){
 
     const understanding = useSelector(state=>state.understanding);
 
-
+    //Packages all the data to dispatch into feedback reducer
     let toFeedback = {
         feeling,
         support,
@@ -23,12 +23,15 @@ function CommentForm(){
         comment
     }
 
+    //On submit, sends data to state and moves the user to the review page.
     const saveComment = (evt) => {
         evt.preventDefault
+        //Sends the comment data to comment state
         dispatch({
             type:'STORE_COMMENT',
             payload: comment
         });
+        //Sends the toFeedback object to the feedback state
         dispatch({
             type: 'BUNDLE_FEEDBACK',
             payload: toFeedback
