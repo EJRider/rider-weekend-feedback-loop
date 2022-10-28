@@ -27,7 +27,8 @@ function SupportForm(){
             onChange={(evt)=>{setSupNum(evt.target.value)}}
             value={supNum}
             ></input>
-
+            <br/>
+            <br/>
             <button type='submit'>Next</button>
         </form>
         </>

@@ -23,14 +23,15 @@ function FeelingForm(){
 
     return (
         <>
-        How do you feel?
+        <h2>How do you feel?</h2>
         <form onSubmit={saveFeel}>
             <input 
             type='number'
             onChange={(evt)=>{setFeelNum(evt.target.value)}}
             value={feelNum}
             ></input>
-
+            <br/>
+            <br/>
             <button type='submit'>Next</button>
         </form>
         </>
