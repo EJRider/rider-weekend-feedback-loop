@@ -9,6 +9,21 @@ function CommentForm(){
 
     const [comment, setComment] = useState('');
 
+    const feeling = useSelector(state=>state.feeling);
+
+    const support = useSelector(state=>state.support);
+
+    const understanding = useSelector(state=>state.understanding);
+
+    const comments = useSelector(state=>state.comment);
+
+    let toFeedback = {
+        feeling,
+        support,
+        understanding,
+        comments
+    }
+
     const saveComment = (evt) => {
         evt.preventDefault
         dispatch({
@@ -16,6 +31,10 @@ function CommentForm(){
             payload: comment
         });
         history.push('/review')
+        dispatch({
+            type: 'BUNDLE_FEEDBACK',
+            payload: toFeedback
+        });
     }
 
     return (
