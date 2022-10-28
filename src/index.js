@@ -17,15 +17,16 @@ const feeling = (state=0, action)=>{
 }
 
 
+
 const storeInstace = createStore(
     combineReducers({
         feeling,
-        support,
-        understanding,
-        comment,
+        // support,
+        // understanding,
+        // comment,
     }),
     applyMiddleware(logger)
 );
 
-ReactDOM.render(<Provider><App /></Provider>, document.getElementById('root'));
+ReactDOM.render(<Provider store={storeInstace}><App /></Provider>, document.getElementById('root'));
 registerServiceWorker();
