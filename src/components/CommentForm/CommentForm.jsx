@@ -15,13 +15,12 @@ function CommentForm(){
 
     const understanding = useSelector(state=>state.understanding);
 
-    const comments = useSelector(state=>state.comment);
 
     let toFeedback = {
         feeling,
         support,
         understanding,
-        comments
+        comment
     }
 
     const saveComment = (evt) => {
@@ -30,11 +29,11 @@ function CommentForm(){
             type:'STORE_COMMENT',
             payload: comment
         });
-        history.push('/review')
         dispatch({
             type: 'BUNDLE_FEEDBACK',
             payload: toFeedback
         });
+        history.push('/review');
     }
 
     return (
