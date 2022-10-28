@@ -40,6 +40,14 @@ const comment = (state='',action)=>{
     return state;
 }
 
+const feedback = (state={}, action)=>{
+    switch(action.type){
+        case 'BUNDLE_FEEDBACK':
+            return action.payload;
+    }
+    return state;
+}
+
 
 
 const storeInstace = createStore(
@@ -48,6 +56,7 @@ const storeInstace = createStore(
         support,
         understanding,
         comment,
+        feedback
     }),
     applyMiddleware(logger)
 );

@@ -8,7 +8,7 @@ function UnderstandingForm () {
 
     const dispatch = useDispatch();
 
-    const [underNum, setUnderNum] = useState(0);
+    const [underNum, setUnder] = useState(0);
 
     const saveUnder = (evt) => {
         evt.preventDefault
@@ -25,7 +25,7 @@ function UnderstandingForm () {
         <form onSubmit={saveUnder}>
             <input 
             type='number'
-            onChange={(evt)=>{setUnderlNum(evt.target.value)}}
+            onChange={(evt)=>{setUnder(evt.target.value)}}
             value={underNum}
             ></input>
             <br/>
