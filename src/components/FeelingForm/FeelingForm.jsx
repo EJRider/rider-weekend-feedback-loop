@@ -1,15 +1,23 @@
 import {useState} from 'react';
 import {useDispatch} from 'react-redux';
+import {useHistory} from 'react-router-dom';
+
 
 
 function FeelingForm(){
 
-    const dispatch = useDispatch()
+    const history = useHistory();
 
-    const [feelNum, setFeelNum] = useState(0)
+    const dispatch = useDispatch();
+
+    const [feelNum, setFeelNum] = useState(0);
 
     const saveFeel = (evt) => {
         evt.preventDefault
+        dispatch({
+            type:'STORE_FEELING',
+            payload: 
+        })
     }
 
     return (

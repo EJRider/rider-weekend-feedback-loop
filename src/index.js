@@ -8,6 +8,14 @@ import { createStore, combineReducers, applyMiddleware} from 'redux';
 import logger from 'redux-logger';
 
 
+const feeling = (state=0, action)=>{
+    switch(action.type){
+        case 'STORE_FEELING':
+            return action.payload;
+    }
+    return state;
+}
+
 
 const storeInstace = createStore(
     combineReducers({
