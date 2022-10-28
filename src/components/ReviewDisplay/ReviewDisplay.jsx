@@ -1,16 +1,16 @@
-import {useDispatch, useSelector} from 'react-redux';
+import {useSelector} from 'react-redux';
 import {useHistory} from 'react-router-dom';
 
-function ReviewDisplay(){
+function ReviewDisplay({submitReview}){
 
     const history = useHistory();
 
-    const dispatch = useDispatch();
 
     const feedback = useSelector(store=>store.feedback)
 
     const saveFeedback = () => {
         console.log('saving feedback');
+        submitReview(feedback);
     }
 
     const backToTheStart = () => {

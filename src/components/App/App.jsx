@@ -12,6 +12,10 @@ import { HashRouter as Router, Route} from 'react-router-dom';
 
 function App() {
 
+  const submitReview = (feedback)=>{
+    axios.post('/')
+  }
+
   return (
     <Router>
     <div className='App'>
@@ -26,7 +30,7 @@ function App() {
       <FeelingForm/>
       </Route>
       <Route path='/review' exact>
-      <ReviewDisplay/>
+      <ReviewDisplay submitReview={submitReview}/>
       </Route>
       <Route path='/support' exact>
       <SupportForm/>
