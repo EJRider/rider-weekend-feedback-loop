@@ -21,7 +21,7 @@ const feeling = (state=0, action)=>{
 const storeInstace = createStore(
     combineReducers({
         feeling,
-        // support,
+        support,
         // understanding,
         // comment,
     }),
