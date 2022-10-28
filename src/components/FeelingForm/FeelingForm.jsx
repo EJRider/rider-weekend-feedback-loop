@@ -1,7 +1,10 @@
 import {useState} from 'react';
-import {useDispatch} from ''
+import {useDispatch} from 'react-redux';
+
 
 function FeelingForm(){
+
+    const dispatch = useDispatch()
 
     const [feelNum, setFeelNum] = useState(0)
 
