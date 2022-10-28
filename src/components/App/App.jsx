@@ -34,8 +34,8 @@ function App() {
       {/* The comment page , the fourth form the user fills */}
       <Route path='/comment' exact>
       <CommentForm/>
-      {/* The feeling form, starting place for this app */}
       </Route>
+      {/* The feeling form, starting place for this app */}
       <Route path='/' exact>
       <FeelingForm/>
       </Route>

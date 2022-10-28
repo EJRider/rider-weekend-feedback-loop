@@ -10,6 +10,7 @@ function UnderstandingForm () {
 
     const [underNum, setUnder] = useState(0);
 
+    //Sends the understanding data to the state, then moves the user to the comment page
     const saveUnder = (evt) => {
         evt.preventDefault
         dispatch({

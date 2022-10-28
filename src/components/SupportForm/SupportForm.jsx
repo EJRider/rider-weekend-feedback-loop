@@ -9,6 +9,7 @@ function SupportForm(){
 
     const [supNum, setSupNum] = useState(0);
 
+    //Sends the support data to the state, then moves the user to the Understanding page
     const saveSup = (evt) => {
         evt.preventDefault
         dispatch({
