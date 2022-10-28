@@ -6,22 +6,33 @@ import SupportForm from '../SupportForm/SupportForm';
 import ReviewDisplay from '../ReviewDisplay/ReviewDisplay';
 import FeelingForm from '../FeelingForm/FeelingForm';
 import CommentForm from '../CommentForm/CommentForm';
+import { HashRouter as Router, Route} from 'react-router-dom';
+
 
 
 function App() {
 
   return (
+    <Router>
     <div className='App'>
       <header className='App-header'>
         <h1 className='App-title'>Feedback!</h1>
         <h4>Don't forget it!</h4>
       </header>
+      <Route path='/comment' exact>
       <CommentForm/>
+      </Route>
+      <Route path='/feeling' exact>
       <FeelingForm/>
+      </Route>
+      <Route path='/review' exact>
       <ReviewDisplay/>
+      </Route>
+      <Route path='/'
       <SupportForm/>
       <UnderstandingForm/>
     </div>
+    </Router>
   );
 }
 
