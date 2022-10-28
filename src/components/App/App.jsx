@@ -22,15 +22,18 @@ function App() {
       <Route path='/comment' exact>
       <CommentForm/>
       </Route>
-      <Route path='/feeling' exact>
+      <Route path='/' exact>
       <FeelingForm/>
       </Route>
       <Route path='/review' exact>
       <ReviewDisplay/>
       </Route>
-      <Route path='/'
+      <Route path='/support' exact>
       <SupportForm/>
+      </Route>
+      <Route path='/understanding' exact>
       <UnderstandingForm/>
+      </Route>
     </div>
     </Router>
   );
