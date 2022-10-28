@@ -11,9 +11,12 @@ function ReviewDisplay({submitReview}){
     const saveFeedback = () => {
         console.log('saving feedback');
         submitReview(feedback);
+        alert('Thank you for providing feedback, have a lovely day :)');
+        history.push('/')
     }
 
     const backToTheStart = () => {
+        alert('Sending you back to the start');
         history.push('/')
     }
 

@@ -5,6 +5,7 @@ const pool = require('../modules/pool');
 
 router.post('/', (req,res)=>{
     let newFeedback = req.body;
+    console.log('newFeedback is', newFeedback);
     const sqlText = `
     INSERT INTO "feedback"
         ("feeling", "understanding", "support", "comments")

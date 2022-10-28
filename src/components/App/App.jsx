@@ -13,7 +13,7 @@ import { HashRouter as Router, Route} from 'react-router-dom';
 function App() {
 
   const submitReview = (feedback)=>{
-    axios.post('/', feedback)
+    axios.post('/feedback', feedback)
       .then(response => {
         console.log('adding review!', response);
       })
