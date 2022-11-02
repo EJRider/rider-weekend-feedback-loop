@@ -1,7 +1,10 @@
 import {useSelector} from 'react-redux';
 import {useHistory} from 'react-router-dom';
+import {useDispatch} from 'react-redux';
 
 function ReviewDisplay({submitReview}){
+
+    const dispatch = useDispatch();
 
     const history = useHistory();
 
@@ -13,8 +16,10 @@ function ReviewDisplay({submitReview}){
         submitReview(feedback);
         alert('Thank you for providing feedback, have a lovely day :)');
         history.push('/')
+        dispatch({
+            type: 'RESET'
+        })
     }
-
     //Alerts the user that they are going back to the start of the survey, then moves the user back to the Feeling('Home') page
     const backToTheStart = () => {
         alert('Sending you back to the start');

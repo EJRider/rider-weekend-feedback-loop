@@ -31,6 +31,8 @@ function FeelingForm(){
             type='number'
             onChange={(evt)=>{setFeelNum(evt.target.value)}}
             value={feelNum}
+            min='1'
+            max='6'
             ></input>
             <br/>
             <br/>

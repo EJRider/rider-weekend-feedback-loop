@@ -27,6 +27,8 @@ function SupportForm(){
             type='number'
             onChange={(evt)=>{setSupNum(evt.target.value)}}
             value={supNum}
+            min='1'
+            max='6'
             ></input>
             <br/>
             <br/>

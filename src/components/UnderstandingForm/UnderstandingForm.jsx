@@ -28,6 +28,8 @@ function UnderstandingForm () {
             type='number'
             onChange={(evt)=>{setUnder(evt.target.value)}}
             value={underNum}
+            min='1'
+            max='6'
             ></input>
             <br/>
             <br/>
